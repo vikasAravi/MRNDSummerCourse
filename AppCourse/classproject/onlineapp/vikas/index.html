@@ -1,0 +1,12 @@
+<table border = "1">
+<tr>
+  <th>College</th>
+  <th>Acronym</th>
+</tr>
+{% for r in data %}
+<tr>
+    <td> {{ r.name }} </td>
+    <td><li><a href = "{% url 'fetch' r.id %}">{{ r.acronym }}</a></li></td>
+</tr>
+{% endfor %}
+</table>
